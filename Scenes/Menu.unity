@@ -961,6 +961,7 @@ GameObject:
   - component: {fileID: 1660784504}
   - component: {fileID: 1660784503}
   - component: {fileID: 1660784502}
+  - component: {fileID: 1660784506}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1049,6 +1050,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1660784506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1660784501}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4411d05ec631f7c4783916f636d2827b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberWithMin0: 0
+  numberWithRange: 0
+  dialogueOne: 
+  nameToDialogue: 
+  player:
+    idPlayer: 0
+    namePlayer: 
 --- !u!1 &1829807254
 GameObject:
   m_ObjectHideFlags: 0
