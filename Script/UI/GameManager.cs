@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -31,10 +32,13 @@ public class GameManager : MonoBehaviour {
 
     public GameObject GameOverScreen;
 
+    public static Action OnUpdateScore;
+
     private void Awake()
     {
         GameOverScreen.SetActive(false);
         OnPlayerDeath += ShowGameOverScreen;
+        OnUpdateScore += UpdateScoreUI;
     }
     private void ShowGameOverScreen()
     {
@@ -47,5 +51,9 @@ public class GameManager : MonoBehaviour {
     public void ChangeScene(string scene)
     {
         SceneManager.LoadScene(scene);
+    }
+    public void UpdateScoreUI()
+    {
+        Debug.Log("Tu score fue modificado");
     }
 }

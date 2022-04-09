@@ -14,26 +14,26 @@ public class Fade : MonoBehaviour {
         spr = GetComponent<SpriteRenderer>();
 
         GameManager.OnPlayerDeath += FadeIn;
-        Debug.Log("FadeIn ha sido incorporado");
+        //Debug.Log("FadeIn ha sido incorporado");
 
         FadeOut();
     }
     private void StartGame()
     {
-        Debug.Log("FadeOut Completo");
+        //Debug.Log("FadeOut Completo");
     }
     public void FadeIn()
     {
-        Debug.Log("FadeIn ha sido llamado");
+        //Debug.Log("FadeIn ha sido llamado");
 
         spr.DOFade(1, speed).OnComplete(()=> {
-            Debug.Log("FadeIn Completo");
+            //Debug.Log("FadeIn Completo");
         });
     }
     public void FadeOut()
     {
         spr.DOFade(0, speed).OnComplete(()=>StartGame()).OnStart(()=> {
-            Debug.Log("FadeOut Iniciado");
+            //Debug.Log("FadeOut Iniciado");
         });
     }
 }
