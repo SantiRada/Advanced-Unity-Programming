@@ -28,11 +28,22 @@ public class PlayerController : MonoBehaviour {
         movementX = movementVector.x;
         movementY = movementVector.y;
     }
+    private void OnFire()
+    {
+        SoundManager.instance.PlayShoot();
+    }
     private void FixedUpdate()
     {
         rb2d.rotation -= movementX * rotationSpeed * Time.fixedDeltaTime;
 
         speed = Mathf.Clamp(speed + movementY, 80f, maxSpeed);
         rb2d.velocity = transform.up * speed * Time.fixedDeltaTime;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            FindObjectOfType<GameManager>().PlayerKilled();
+        }
     }
 }
